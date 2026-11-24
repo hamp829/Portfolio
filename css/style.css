@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+p,
+div {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    color: rgb(246, 244, 252);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(185, 180, 201);
+}
+
+.linkanime {
+    transition: 0.1s;
+}
+
+.linkanime:hover {
+    transform: scale(0.98);
+}
+
+
+
+/*headerの設定*/
+
+.container.header {
+    background-image: url(../images/header.jpg);
+    background-position: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    justify-content: center;
+    z-index: 100;
+    align-items: flex-end;
+}
+
+/*bodyの設定*/
+body {
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    text-align: center;
+    margin: 0;
+}
+
+.hero {
+    margin: 120px 50px 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: title 0.5s ease-out forwards;
+}
+
+
+.introduction {
+    margin: 60px 50px 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: title 0.5s ease-out forwards;
+}
+
+
+@keyframes title {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.backtotop {
+    margin-bottom: 150px;
+}
+
+.container.contents {
+    display: flex;
+    justify-content: center;
+}
+
+.contentsbox {
+    background-color: rgb(61, 45, 31);
+    color: rgb(255, 238, 223);
+    margin: 5px;
+    width: 320px;
+    border-radius: 5px;
+}
+
+.contentstitle {
+    color: rgb(255, 238, 223);
+    font-size: 1.2rem;
+    margin: 1px;
+}
+
+.contentstext {
+    color: rgb(255, 238, 223);
+    font-size: 0.7rem;
+    margin: 0.5px 0.5px 20px 0.5px;
+}
+
+/*DTP Graphic*/
+.container.g-contents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container.g-contents.hob {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.image.job img {
+    margin: 0.2rem;
+    border-radius: 4px;
+}
+
+.image.hob img {
+    flex-grow: 1;
+    margin: 0.2rem;
+    border-radius: 4px;
+}
+
+.text {
+    margin-bottom: 50px;
+    color: rgb(61, 45, 31);
+}
+
+
+
+/*footerの設定*/
+footer {
+    background-image: url(../images/footer.jpg);
+    background-position: center;
+    width: 100%;
+    padding: 45px 0 0 0;
+    height: 90px;
+    position: fixed;
+    bottom: 0px;
+}
+
+.slider-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    bottom: 105px;
+}
+
+.slider {
+    animation: wave 70s infinite linear both;
+}
+
+@keyframes wave {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
